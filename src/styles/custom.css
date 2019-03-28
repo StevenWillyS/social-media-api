@@ -1,0 +1,9 @@
+.main{
+	margin-top: 60px;
+}
+.text-black{
+	color: black;
+}
+.text-black:hover{
+	text-decoration: none;
+}
