@@ -15,8 +15,10 @@ class ListUser extends React.Component{
 		  .catch(error => console.error('Error: ',error))
 	}
 	render(){
+		const {users} = this.state;
+		const {setID} = this.props;
 		return(
-			<ViewUser users={this.state.users} />			
+			<ViewUser users={users} setID={setID} />			
 		)
 	}
 }
