@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import SinglePost from './SinglePost'
-import DeletePost from './DeletePost'
+import DeleteData from './DeleteData'
 const ExtraButton = props =>{
 	return(
 		<div>
 			<button 
-			   onClick={()=>DeletePost(props.id,props.index,props.deletePost)}
+			   onClick={()=>DeleteData('posts',props.id,props.index,props.deletePost)}
 			   className='btn btn-danger btn-sm'>
 			     Delete
 			</button>
