@@ -1,5 +1,4 @@
 import React from 'react'
-import {Row} from './BootstrapComponent'
 import SinglePost from './SinglePost'
 import ViewComments from './ViewComments'
 

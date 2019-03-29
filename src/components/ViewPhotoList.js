@@ -10,8 +10,9 @@ const ViewPhotoList = props =>{
 			  key={photo.id}
 			  className='p-1'>
 				<Link 
-				  to={`photo/${photo.id}`}>
-					<img src={photo.thumbnailUrl} />
+				  to={`photo/${photo.id}`}
+				  onClick={()=>props.changeSelectPhoto(photo.id)}>
+					<img src={photo.thumbnailUrl} alt='Thumbnail' />
 				</Link>
 			</Col>
 		)

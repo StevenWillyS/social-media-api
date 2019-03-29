@@ -21,3 +21,12 @@ export const Container = props => {
 		</div>
 	)
 }
+Container.defaultProps = {
+	className: ''
+};
+Row.defaultProps = {
+	className: ''
+};
+Col.defaultProps = {
+	className: ''
+};

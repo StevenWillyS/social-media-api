@@ -77,6 +77,7 @@ class UserPage extends React.Component{
 				  changeToPost={this.changeToPost}
 				  changeToAlbum={this.changeToAlbum}
 				  pathname={this.props.match.url} />
+				<hr />
 				{isPost
 				   ? this.IsUrlContainsPost() 
 				      ? <UserPost userId={this.props.userId} changePostId={this.changeId} postId={postId} /> 

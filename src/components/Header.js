@@ -10,9 +10,9 @@ class Header extends React.Component{
 			  	List User
 			  </Link>
 			  <Route path="/:username" render={(props)=>(
-			  	  <a className='nav-item nav-link'> 
+			  	  <button className='nav-item nav-link btn-link btn'> 
 			  	    {props.match.params.username}
-			  	  </a>
+			  	  </button>
 			  	)} />
 		   </nav>
 		)
