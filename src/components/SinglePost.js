@@ -1,13 +1,21 @@
 import React from 'react'
-import {Row} from './BootstrapComponent'
+import {Row,Col,Container} from './BootstrapComponent'
 
 const SinglePost = props =>{
 	return(
-		<Row className='border'>
-			<p><b>{props.post.title}</b></p>
-			<span>{props.post.body}</span><br/>
-			{props.children}
-		</Row>
+		<Container className='border'>
+			<Row>
+				<b>{props.post.title}</b>
+			</Row>
+			<Row>
+				<Col>
+					<span>{props.post.body}</span><br/>
+				</Col>
+			</Row>
+			<Row>
+				{props.children}
+			</Row>
+		</Container>
 	)
 }
 

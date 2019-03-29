@@ -1,6 +1,5 @@
 import React from 'react'
 import ViewUser from './ViewUser'
-
 class ListUser extends React.Component{
 	state = {
 		users: []

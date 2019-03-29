@@ -7,3 +7,6 @@
 .text-black:hover{
 	text-decoration: none;
 }
+.buttonGroup{
+	margin-top: -25px;
+}

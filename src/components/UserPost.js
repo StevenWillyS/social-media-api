@@ -78,7 +78,6 @@ class UserPost extends React.Component{
 		})
 	}
 	resetPost(){
-		console.log(initialState)
 		this.setState({
 			post: JSON.parse(JSON.stringify(initialState))
 		})

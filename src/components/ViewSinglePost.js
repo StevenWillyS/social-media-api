@@ -48,7 +48,6 @@ class ViewSinglePost extends React.Component{
 		})
 	}
 	addNewComment(comment){
-		console.log(comment)
 		var comments = this.state.comments.slice()
 		comments.push(comment)
 		this.setState({

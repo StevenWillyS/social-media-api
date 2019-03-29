@@ -81,7 +81,7 @@ class UserPage extends React.Component{
 				{isPost
 				   ? this.IsUrlContainsPost() 
 				      ? <UserPost userId={this.props.userId} changePostId={this.changeId} postId={postId} /> 
-				      : 'Welcome' 
+				      : 'Click Posts/Albums' 
 				   : <UserAlbum userId={this.props.userId} changeAlbumId={this.changeId} albumId={albumId} />
 				}
 			</Container>

@@ -4,7 +4,7 @@ import SinglePost from './SinglePost'
 import DeleteData from './DeleteData'
 const ExtraButton = props =>{
 	return(
-		<div>
+		<div className='buttonGroup'>
 			<button 
 			   onClick={()=>DeleteData('posts',props.id,props.index,props.deletePost)}
 			   className='btn btn-danger btn-sm'>

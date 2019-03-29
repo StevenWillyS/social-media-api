@@ -21,19 +21,25 @@ const ExtraButton = props =>{
 const ViewComments = props => {
 	const comments = props.comments.map((comment,index)=>{
 		return(
-			<Row key={comment.id} className='border'>
-				<b>{comment.name}</b>
-				<p>{comment.body}</p>
-				<Col>
-				  by:{comment.email}
-				</Col>
-				<ExtraButton
-				   id={comment.id} 
-				   index={index} 
-				   deleteComment={props.deleteComment}
-				   editComment={props.changeEdit}
-				   currentComment={comment} />
-			</Row>
+			<Container key={comment.id} className='border'>
+				<Row>
+					<b>{comment.name}</b>
+				</Row>
+				<Row>
+					<p>{comment.body}</p>
+				</Row>
+				<Row>
+					<Col>
+					  by:{comment.email}
+					</Col>
+					<ExtraButton
+					   id={comment.id} 
+					   index={index} 
+					   deleteComment={props.deleteComment}
+					   editComment={props.changeEdit}
+					   currentComment={comment} />
+					</Row>
+			</Container>
 		)
 	})
 	return(
