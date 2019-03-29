@@ -2,6 +2,7 @@ import React from 'react'
 import {Container,Row,Col} from './BootstrapComponent'
 import { Link } from "react-router-dom"
 import UserPost from './UserPost'
+import UserAlbum from './UserAlbum'
 
 const ButtonLink = props => {
 	return(
@@ -39,8 +40,10 @@ class UserPage extends React.Component{
 		this.state = {
 			isPost: true,
 			postId: '',
+			albumId: '',
 		}
 		this.changeToPost = this.changeToPost.bind(this)
+		this.changeToAlbum = this.changeToAlbum.bind(this)
 		this.changeId = this.changeId.bind(this)
 	}	
 	changeToPost(){
@@ -52,6 +55,7 @@ class UserPage extends React.Component{
 	changeToAlbum(){
 		this.setState({
 			isPost: false,
+			albumId: ''
 		})	
 	}
 	changeId(id,name='postId'){
@@ -71,12 +75,13 @@ class UserPage extends React.Component{
 			<Container>
 				<ButtonGroup 
 				  changeToPost={this.changeToPost}
+				  changeToAlbum={this.changeToAlbum}
 				  pathname={this.props.match.url} />
 				{isPost
 				   ? this.IsUrlContainsPost() 
 				      ? <UserPost userId={this.props.userId} changePostId={this.changeId} postId={postId} /> 
 				      : 'Welcome' 
-				   : 'Album'
+				   : <UserAlbum userId={this.props.userId} changeAlbumId={this.changeId} albumId={albumId} />
 				}
 			</Container>
 		)
