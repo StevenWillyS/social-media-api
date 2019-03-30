@@ -2,7 +2,9 @@ import React from 'react'
 
 export const Col = props => {
 	return(
-		<div className={ props.col ? `col-${props.col} ${props.className}` : `col ${props.className}`}>
+		<div className={ props.col 
+				? `col-${props.col} ${props.className}` 
+				: `col ${props.className}`}>
 			{props.children}
 		</div>
 	)

@@ -23,9 +23,12 @@ class App extends React.Component{
 			<Container>
 				<Header />
 				<div className='main'>
-					<Route path="/" exact 
-					    render={()=><ListUser setID={this.setID} />} />
-					<Route path="/:username" 
+					<Route 
+						path="/" exact 
+					    render={()=>
+					    	<ListUser setID={this.setID} />} />
+					<Route 
+						path="/:username" 
 						render={(props)=>
 							<UserPage {...props} userId={this.state.userId}/>} />
 				</div>

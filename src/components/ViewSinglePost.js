@@ -82,7 +82,11 @@ class ViewSinglePost extends React.Component{
 		return(
 			<SinglePost post={post}>
 				Comments:
-				<ViewComments comments={comments} comment={comment} deleteComment={this.deleteComment} changeEdit={this.changeEdit}/>
+				<ViewComments 
+				  comments={comments} 
+				  comment={comment} 
+				  deleteComment={this.deleteComment} 
+				  changeEdit={this.changeEdit}/>
 				<Col>
 				<UserCommentController 
 				  postId={post.id}

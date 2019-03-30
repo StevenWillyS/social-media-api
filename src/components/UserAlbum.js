@@ -32,8 +32,11 @@ class UserAlbum extends React.Component{
 		return(
 			<div>
 			{!albumId
-				? <ViewAlbums albums={albums} changeAlbumId={changeAlbumId}/>
-				: <ViewSingleAlbum album={this.searchAlbum(albumId)}/>
+				? <ViewAlbums 
+					albums={albums} 
+					changeAlbumId={changeAlbumId}/>
+				: <ViewSingleAlbum 
+					album={this.searchAlbum(albumId)}/>
 			}
 			</div>
 		)

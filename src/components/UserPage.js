@@ -80,9 +80,15 @@ class UserPage extends React.Component{
 				<hr />
 				{isPost
 				   ? this.IsUrlContainsPost() 
-				      ? <UserPost userId={this.props.userId} changePostId={this.changeId} postId={postId} /> 
+				      ? <UserPost 
+				      		userId={this.props.userId} 
+				      		changePostId={this.changeId} 
+				      		postId={postId} /> 
 				      : 'Click Posts/Albums' 
-				   : <UserAlbum userId={this.props.userId} changeAlbumId={this.changeId} albumId={albumId} />
+				   : <UserAlbum 
+				   		userId={this.props.userId} 
+				   		changeAlbumId={this.changeId} 
+				   		albumId={albumId} />
 				}
 			</Container>
 		)

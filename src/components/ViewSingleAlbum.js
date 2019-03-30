@@ -39,7 +39,9 @@ class ViewSingleAlbum extends React.Component{
 			<Container>
 				<Row className='text-center'>
 					<Col col='12'>
-						<button className='btn btn-link text-black' href='#' onClick={()=>this.changePhotoId(0)}>
+						<button 
+						  className='btn btn-link text-black' 
+						  onClick={()=>this.changePhotoId(0)}>
 							<h2>
 								Album <br/>
 								{album.title}
@@ -50,11 +52,12 @@ class ViewSingleAlbum extends React.Component{
 				<hr />
 				<Row className='text-center'>
 					{photoId
-						? <ViewSinglePhoto photo={this.searchPhoto(photoId)} />
-						: <ViewPhotoList changeSelectPhoto={this.changePhotoId} photos={photos} />
+						? <ViewSinglePhoto 
+							photo={this.searchPhoto(photoId)} />
+						: <ViewPhotoList 
+							changeSelectPhoto={this.changePhotoId} 
+							photos={photos} />
 					}
-					
-					
 				</Row>
 			</Container>
 		)
