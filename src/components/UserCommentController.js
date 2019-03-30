@@ -1,5 +1,16 @@
 import React from 'react'
-
+import {Container,Row,Col} from './BootstrapComponent'
+const CenterNewComment = props => {
+	return(
+			<Container>
+				<Row className='justify-content-center'>
+					<Col col='11'>
+						{props.children}	
+					</Col>
+				</Row>
+			</Container>
+	)
+}
 class UserCommentController extends React.Component{
 	createComment(props){
 		const url = `https://jsonplaceholder.typicode.com/comments`
@@ -60,41 +71,43 @@ class UserCommentController extends React.Component{
 	render(){
 		const {name,email,body} = this.props.comment
 		return(
-			<form>
-				New Comments:
-				<div className='form-group'>
-				  <label>Name</label>
-				  <input 
-					  type='text'
-					  name='name'
-					  className='form-control'
-					  value={name}
-					  onChange={this.props.handleChange}/>	
-				</div>
-				<div className='form-group'>
-				  <label>Email</label>
-				  <input 
-					  type='text'
-					  name='email'
-					  className='form-control'
-					  value={email}
-					  onChange={this.props.handleChange}/>	
-				</div>
-				<div className='form-group'>
-				  <label>Body</label>
-				  <textarea 
-					  name='body'
-					  className='form-control'
-					  value={body}
-					  onChange={this.props.handleChange}/>	
-				</div>
-				<input 
-				  type='button'
-				  value='Submit'
-				  className='btn btn-secondary'
-				  onClick={()=>this.clickSwitcher(this.props)}/>
-				  <hr/>
-			</form>
+			<CenterNewComment>
+				<form>
+					New Comments:
+					<div className='form-group'>
+					  <label>Name</label>
+					  <input 
+						  type='text'
+						  name='name'
+						  className='form-control'
+						  value={name}
+						  onChange={this.props.handleChange}/>	
+					</div>
+					<div className='form-group'>
+					  <label>Email</label>
+					  <input 
+						  type='text'
+						  name='email'
+						  className='form-control'
+						  value={email}
+						  onChange={this.props.handleChange}/>	
+					</div>
+					<div className='form-group'>
+					  <label>Body</label>
+					  <textarea 
+						  name='body'
+						  className='form-control'
+						  value={body}
+						  onChange={this.props.handleChange}/>	
+					</div>
+					<input 
+					  type='button'
+					  value='Submit'
+					  className='btn btn-secondary'
+					  onClick={()=>this.clickSwitcher(this.props)}/>
+					  <hr/>
+				</form>	
+			</CenterNewComment>
 		)
 	}
 }
