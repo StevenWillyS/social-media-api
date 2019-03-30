@@ -2,7 +2,7 @@ import React from 'react'
 import ViewPosts from './ViewPosts'
 import ViewSinglePost from './ViewSinglePost'
 import UserPostController from './UserPostController'
-import {Row,Col} from './BootstrapComponent'
+import {Row,Col,Container} from './BootstrapComponent'
 
 const initialState = {
 	userId: 1,
@@ -96,20 +96,27 @@ class UserPost extends React.Component{
 		const {posts} = this.state
 		const {postId,changePostId} = this.props
 		return(
-			<Row>
-			{!postId
-				? <Col>
-				    {this.showPostController()}
-					<ViewPosts 
-					   isCommandAvailable={this.props.userId === 1} 
-					   posts={posts} 
-					   changePostId={changePostId} 
-					   deletePost={this.deletePost} 
-					   changeEdit={this.changeEdit}/>    
-				  </Col>					
-				: <ViewSinglePost post={this.searchPost(postId)}/>
-			}
-			</Row>
+			<Container>
+				<Row className='text-center'>
+					<Col>
+						<h2>Posts</h2>
+					</Col>
+				</Row>
+				<Row>
+				{!postId
+					? <Col>
+					    {this.showPostController()}
+						<ViewPosts 
+						   isCommandAvailable={this.props.userId === 1} 
+						   posts={posts} 
+						   changePostId={changePostId} 
+						   deletePost={this.deletePost} 
+						   changeEdit={this.changeEdit}/>    
+					  </Col>					
+					: <ViewSinglePost post={this.searchPost(postId)}/>
+				}
+				</Row>
+			</Container>
 		)
 	}
 }

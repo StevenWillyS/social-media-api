@@ -43,6 +43,9 @@ const ViewUser = props => {
 	})
 	return(
 		<div>
+			<div className='text-center'>
+				<h1 className='h1-config'>User List</h1>
+			</div>
 			{user}
 		</div>
 	)

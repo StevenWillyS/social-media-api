@@ -63,7 +63,7 @@ class UserCommentController extends React.Component{
 			<form>
 				New Comments:
 				<div className='form-group'>
-				  <label>name</label>
+				  <label>Name</label>
 				  <input 
 					  type='text'
 					  name='name'
@@ -72,7 +72,7 @@ class UserCommentController extends React.Component{
 					  onChange={this.props.handleChange}/>	
 				</div>
 				<div className='form-group'>
-				  <label>email</label>
+				  <label>Email</label>
 				  <input 
 					  type='text'
 					  name='email'

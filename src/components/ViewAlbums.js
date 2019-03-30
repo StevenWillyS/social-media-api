@@ -20,6 +20,11 @@ const ViewAlbums = props =>{
 	})
 	return(
 		<Container>
+			<Row className='text-center'>
+				<Col>
+					<h2>Albums</h2>
+				</Col>
+			</Row>
 			<Row>
 				{albums}
 			</Row>

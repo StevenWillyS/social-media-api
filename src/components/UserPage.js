@@ -73,6 +73,9 @@ class UserPage extends React.Component{
 		const {isPost,postId,albumId} = this.state
 		return(
 			<Container>
+				<div className='text-center'>
+					<h1 className='h1-config'>User</h1>
+				</div>
 				<ButtonGroup 
 				  changeToPost={this.changeToPost}
 				  changeToAlbum={this.changeToAlbum}
